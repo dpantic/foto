@@ -1,4 +1,5 @@
 import React from 'react';
+import Avatar from './Avatar';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
@@ -10,6 +11,7 @@ import MenuIcon from 'material-ui-icons/Menu';
 import Drawer from 'material-ui/Drawer';
 import {Link} from 'react-router-dom';
 const firebase = window.firebase;
+
 
 const styles = theme => ({
   root: {
@@ -65,6 +67,8 @@ class Login extends React.Component{
       </Drawer>
 
       <AppBar position="static">
+
+
         <Toolbar>
 
           <IconButton onClick={this.openDrawer} className={classes.menuButton} color="contrast" aria-label="Menu">
@@ -73,9 +77,10 @@ class Login extends React.Component{
      
           </IconButton>
           <Typography type="title" color="inherit" className={classes.flex}>
-            Title
+            Foto
           </Typography>
 
+<Avatar />
           <Button onClick={this.login} color="contrast">Login</Button>
 
           <Link to="/">
