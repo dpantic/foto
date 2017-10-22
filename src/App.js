@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import Login from './Login'
+import NavBar from './NavBar'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-       <Login />
+       <NavBar />
           { this.props.children }
       </div>
     );
